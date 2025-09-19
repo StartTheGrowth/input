@@ -51,6 +51,10 @@ public class CheckBegin implements Runnable {
 
     @Override
     public void run() {
-        input();
+        if (readSecret.isReadFile()) {
+            input();
+        } else {
+            System.out.println("Доступ невозможен");
+        }
     }
 }

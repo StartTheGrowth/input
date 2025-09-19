@@ -8,7 +8,13 @@ public class ReadSecret {
     private String username;
     private int password;
     private Scanner scanner;
-    private final File file = new File("C:\\Development\\JAVA\\SF\\Input\\src\\main\\resources\\secret.txt");
+    private final File file = new File("D:\\JAVA\\input\\src\\main\\resources\\secret.txt");
+    private boolean isReadFile = file.canRead();
+
+
+    public boolean isReadFile() {
+        return isReadFile;
+    }
 
     public ReadSecret() {
         setSecret();
@@ -28,7 +34,8 @@ public class ReadSecret {
             username = scanner.nextLine();
             password = scanner.nextInt();
         } catch (FileNotFoundException e) {
-            System.out.println("Файл не найден");;
+            System.out.println("Файл не найден");
+            ;
         }
     }
 }
