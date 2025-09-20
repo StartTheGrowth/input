@@ -3,21 +3,20 @@ package input;
 import javax.swing.*;
 
 public class Window {
-
-
-    public Window() {
-        JFrame frame = new JFrame("WINDOW");
-        frame.setSize(200, 600);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JLabel label = new JLabel("Hello World");
-        frame.add(label);
-        frame.setVisible(true);
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new Window();
-            }
-        });
+    private static JFrame frame = null;
+    public static void window(){
+        if (frame == null){
+            frame = new JFrame("WINDOW");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(300, 300);
+            JLabel label = new JLabel("Hello World");
+            label.setVisible(true);
+            frame.add(label);
+            frame.setVisible(true);
+        }
     }
 
+    public Window() {
+        window();
+    }
 }

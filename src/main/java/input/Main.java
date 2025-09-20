@@ -1,32 +1,20 @@
 package input;
 
-import javax.swing.*;
-import java.io.IOException;
-
 public class Main {
-    Main() {
-        JFrame frame = new JFrame("WINDOW");
-        frame.setSize(200, 600);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JLabel label = new JLabel("Hello World");
-        frame.add(label);
-        frame.setVisible(true);
-    }
-
-    public static void main(String[] args) {
-//        CheckBegin checkBegin = new CheckBegin();
-//        Thread thread = new Thread(checkBegin);
-//        thread.start();
-//        thread.join();
-//        Thread thread1 = new Thread(new Hello());
-//        if (checkBegin.isOk()) {
-//            thread1.start();
-//        }
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new Main();
-            }
-        });
+    public static void main(String[] args) throws InterruptedException {
+        CheckBegin checkBegin = new CheckBegin();
+        Thread thread = new Thread(checkBegin);
+        thread.start();
+        thread.join();
+        Thread thread1 = new Thread(new Save());
+        if (checkBegin.isOk()) {
+            thread1.start();
+        }
+//        SwingUtilities.invokeLater(new Runnable() {
+//            @Override
+//            public void run() {
+//                new Window();
+//            }
+//        });
     }
 }

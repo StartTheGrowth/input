@@ -8,7 +8,8 @@ public class ReadSecret {
     private String username;
     private int password;
     private Scanner scanner;
-    private final File file = new File("D:\\JAVA\\input\\src\\main\\resources\\secret.txt");
+    private final File file = new File(
+            "C:\\Development\\JAVA\\SF\\Input\\src\\main\\resources\\secret.txt");
     private boolean isReadFile = file.canRead();
 
 
