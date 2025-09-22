@@ -3,12 +3,13 @@ package input;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         CheckBegin checkBegin = new CheckBegin();
+        Menu menu  = new Menu();
         Thread thread = new Thread(checkBegin);
         thread.start();
         thread.join();
-        Thread thread1 = new Thread(new Save());
+
         if (checkBegin.isOk()) {
-            thread1.start();
+            menu.menu();
         }
 //        SwingUtilities.invokeLater(new Runnable() {
 //            @Override

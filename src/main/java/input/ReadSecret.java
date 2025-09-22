@@ -18,7 +18,7 @@ public class ReadSecret {
     }
 
     public ReadSecret() {
-        setSecret();
+        getSecret();
     }
 
     public String getUsername() {
@@ -29,14 +29,13 @@ public class ReadSecret {
         return password;
     }
 
-    private void setSecret() {
+    private void getSecret() {
         try {
             scanner = new Scanner(file);
             username = scanner.nextLine();
             password = scanner.nextInt();
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
-            ;
         }
     }
 }

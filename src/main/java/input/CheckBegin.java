@@ -6,7 +6,7 @@ public class CheckBegin implements Runnable {
     private final ReadSecret readSecret = new ReadSecret();
     private final String USERNAME = readSecret.getUsername();
     private final int PASSWORD = readSecret.getPassword();
-    Scanner scan;
+    private Scanner scan;
     private int count = 3;
     private volatile boolean isOk;
     private boolean isContinue = true;
@@ -19,7 +19,7 @@ public class CheckBegin implements Runnable {
         String inUsername;
         int inPass;
         while (!isOk && isContinue) {
-            System.out.println("Введите логин");
+            System.out.println("Введите имя пользователя");
             scan = new Scanner(System.in);
             inUsername = scan.nextLine();
             System.out.println("Введите пароль");
