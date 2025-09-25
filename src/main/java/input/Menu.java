@@ -26,11 +26,11 @@ public class Menu {
                             menu();
                         } else {
                             numberLine++;
-                            Save.saver(numberLine, line);
+                            WriteLink.writerLink(numberLine, line);
                         }
                     }
                 } else if (line.equals("read")) {
-                    Read.reader();
+                    ReadLink.read();
                 } else if (line.equals("...")) {
                     menu();
                 } else if (line.equals("exit")) {

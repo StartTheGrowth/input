@@ -5,6 +5,9 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ReadSecret {
+    /**
+     * Осуществляет чтение данных допуска в программу
+     */
     private String username;
     private int password;
     private Scanner scanner;

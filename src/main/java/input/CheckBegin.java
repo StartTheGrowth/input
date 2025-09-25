@@ -3,6 +3,10 @@ package input;
 import java.util.Scanner;
 
 public class CheckBegin implements Runnable {
+    /**
+     * Проверяет соответствие имени пользователя и пароля,
+     * вводимых в консоль
+     */
     private final ReadSecret readSecret = new ReadSecret();
     private final String USERNAME = readSecret.getUsername();
     private final int PASSWORD = readSecret.getPassword();
