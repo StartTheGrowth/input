@@ -2,7 +2,7 @@ package input;
 
 import java.util.Scanner;
 
-public class CheckBegin implements Runnable {
+public class CheckBegin /*implements Runnable*/ {
     /**
      * Проверяет соответствие имени пользователя и пароля,
      * вводимых в консоль
@@ -53,7 +53,7 @@ public class CheckBegin implements Runnable {
         return username.equals(USERNAME) && pass == PASSWORD && count != 0;
     }
 
-    @Override
+   // @Override
     public void run() {
         if (readSecret.isReadFile()) {
             input();

@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 public class Link implements Serializable {
     @Serial
-    private static final long serialVersionUID = 0;
+    private static final long serialVersionUID = 1L;
     private int id;
     private String name;
 

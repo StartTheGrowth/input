@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Read {
     public static void reader() {
-        final String path = "C:\\Development\\JAVA\\SF\\Input\\src\\main\\resources\\memory.txt";
+        final String path = "D:\\JAVA\\input\\src\\main\\resources\\memory.txt";
         File file = new File(path);
         try(FileReader reader = new FileReader(file)) {
             int num;

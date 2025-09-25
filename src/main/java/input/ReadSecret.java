@@ -12,7 +12,7 @@ public class ReadSecret {
     private int password;
     private Scanner scanner;
     private final File file = new File(
-            "C:\\Development\\JAVA\\SF\\Input\\src\\main\\resources\\secret.txt");
+            "D:\\JAVA\\input\\src\\main\\resources\\secret.txt");
     private boolean isReadFile = file.canRead();
 
 
