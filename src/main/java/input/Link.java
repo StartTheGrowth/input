@@ -9,8 +9,7 @@ public class Link implements Serializable {
     private int id;
     private String name;
 
-    public Link(int id, String name) {
-        this.id = id;
+    public Link(String name) {
         this.name = name;
     }
 
@@ -33,8 +32,8 @@ public class Link implements Serializable {
     @Override
     public String toString() {
         return "Link{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 '}';
     }
 }

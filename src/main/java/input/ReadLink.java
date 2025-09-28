@@ -1,12 +1,10 @@
 package input;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ReadLink {
-    private static final String path = "D:\\JAVA\\input\\src\\main\\resources\\file.dat";
+    private static final String path = "C:\\Development\\JAVA\\SF\\Input\\src\\main\\resources\\file.dat";
 
     public static void read() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(path))) {
